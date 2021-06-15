@@ -53,7 +53,7 @@ html {
 
 body {
   font-family: var(--font-prima);
-  font-size: 16px;
+  font-size: 22px;
   color:var(--prima-font-color);
   background-image: url('../images/neon-light.png');
   background-position: center -180px;
@@ -448,6 +448,8 @@ body.menu-open .nav-bottom{
   /*clip-path: polygon(0% 0%,100% 10%,100% 90%,0% 100%);
   background: url("/images/mesh.png") no-repeat  center bottom, linear-gradient(139deg, rgba(117,248,210,1) 0%, rgba(96,150,219,1) 65%);*/
   background: linear-gradient(139deg, rgba(117,248,210,1) 0%, rgba(96,150,219,1) 65%);
+  background: linear-gradient(139deg, rgba(44,86,136,1) 0%, rgba(10,139,147,1) 65%);
+  
 }
 .parallax-window {
   background: transparent;
@@ -556,6 +558,7 @@ body.menu-open .nav-bottom{
 #section2{
   width: 100%;
   max-width: 1130px;
+  
 }
 .grid-section2{
   display: grid;
@@ -569,7 +572,7 @@ body.menu-open .nav-bottom{
 }
 .title-sec2{
   grid-area: title;
-  font-size: 44px;
+  font-size: 40px;
   font-weight: bolder;
   font-style: italic;
   width: 100%;
@@ -577,9 +580,15 @@ body.menu-open .nav-bottom{
 }
 .subtitle-sec2{
   grid-area: sub-title;
-  font-size: 26px;
+  font-size: 38px;
   color: var(--sub-font-color);
+  font-weight: bolder;
+  font-style: italic;
   padding: 0 0 20px 20px;
+}
+.margin-sec2{
+  padding: 80px 0 0px 20px;
+  height: 40px;
 }
 .pic-sec2{
   grid-area: pic-sec2;
@@ -591,7 +600,7 @@ body.menu-open .nav-bottom{
 .content-sec2{
   grid-area: content-sec2;
   width: 100%;
-  padding: 0 20px 0 20px;
+  padding: 0px 20px 0 20px;
 }
 .content-sec2 p:not(:nth-child(1)){
   margin-top: 30px;
@@ -600,15 +609,15 @@ body.menu-open .nav-bottom{
 #section3{
   width: 100%;
   max-width: 1130px;
-  background: #6096DA;
-  padding: 50px 0;
-  margin-top: 80px;
+  background: #2b3f61;
+  padding: 10px 0 20px 0;
+  margin-top: 40px;
   border-radius: 12px;
 }
 .grid-section3{
   display: grid;
   grid-template-columns: 45% auto;
-  grid-template-rows: 40px auto;
+  grid-template-rows: auto auto;
   grid-template-areas: 
   "sub-title pic-sec3"
   "content-sec2 pic-sec3"
@@ -658,6 +667,7 @@ body.menu-open .nav-bottom{
 #blue-footer{
   width: 100%;
   margin-top: 40px;
+  font-size: 18px;
   background-color: #6096DA;
 }
 #blue-footer >div{
@@ -676,12 +686,17 @@ body.menu-open .nav-bottom{
 .social-icon-foot img:hover{
  opacity: .75;
 }
+
 @media screen and (max-width: 1150px) {
   #section3{max-width: 100%; border-radius: 0;}
-  #section3 .content-sec2{padding: 0 40px 0 40px;}
-  #section4 .content-sec2{padding: 0 40px 0 40px;}
+  #section3 .content-sec2{padding: 40px 40px 0 40px;}
+  #section4 .content-sec2{padding: 40px 40px 0 40px;}
   .content-sec2{padding: 0 40px 0 20px;}
   .subtitle-sec2{padding: 0 0 20px 40px;}
+  .margin-sec2{
+    padding: 60px 0 0px 40px;
+    height: 40px;
+  }
   .pic-sec2{padding-left: 40px;}
   .pic-sec3{padding-right: 40px;}
   hr{
@@ -702,6 +717,12 @@ body.menu-open .nav-bottom{
 .res-koo{
  max-width: 465px;
  height: auto;
+}
+@media screen and (max-width: 1047px) {
+  .margin-sec2{
+    padding: 0px 0 0px 40px;
+    height: 40px;
+  }
 }
 @media screen and (max-width: 890px) {
   .grid-section3{
@@ -724,8 +745,11 @@ body.menu-open .nav-bottom{
     "content-sec2"
     ;
   }
+  #section3 .content-sec2{padding: 0px 40px 0 40px;}
+  #section4 .content-sec2{padding: 0px 40px 0 40px;}
   .content-sec2 p{margin-top: 30px;}
   .content-sec2{padding: 0 40px 0 40px;}
+  .subtitle-sec2{text-align: center;}
   .pic-sec2{padding-right: 40px; max-width: 100%;}
   .pic-sec3{padding: 0 40px; max-width: 100%;}
   hr{
